@@ -96,7 +96,7 @@ function fetchCoupons(req, res) {
         });
 }
 function singleStoreData(req, res) {
-    Store.find({ _id: req.query._id }, 'img shortDes categoryRef name', function (err, store) {
+    Store.find({ _id: req.query._id }, 'img shortDes categoryRef name longDes', function (err, store) {
         if (err) res.json(resHandler.respondError(err[0], err[1] || -1));
         else if (!store) res.json(resHandler.respondError("Unable to fetch Store Image at the moment", -3));
         else res.json(resHandler.respondSuccess(store, "Store image fetched successfully", 2));

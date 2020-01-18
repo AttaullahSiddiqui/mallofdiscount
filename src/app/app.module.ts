@@ -1,6 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+// import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -39,10 +39,10 @@ import {
     P404Component,
     MenuComponent
   ],
-  providers: [{
-    provide: [LocationStrategy, Title],
-    useClass: HashLocationStrategy
-  }],
+  providers: [
+    Title
+    // useClass: HashLocationStrategy
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

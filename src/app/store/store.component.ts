@@ -16,6 +16,7 @@ export class StoreComponent implements OnInit {
   couponsArray: {} = null;
   storePic;
   storeDetail;
+  longDes;
   storeName;
   storeId;
   codeCopied = false;
@@ -83,6 +84,7 @@ export class StoreComponent implements OnInit {
       if (res.data) {
         this.storePic = res.data['0']['img'];
         this.storeDetail = res.data['0']['shortDes'];
+        this.longDes = res.data['0']['longDes'];
         this.storeName = res.data['0']['name'];
         this.storeId = res.data['0']['_id'];
         this.titleService.setTitle(this.storeName);

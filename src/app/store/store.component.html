@@ -7,6 +7,10 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        <br>
+        <div class="col-md-8 text-center mx-auto">
+            <span [innerHTML]="storeDetail" class="text-center xyz"></span>
+        </div>
         <div class="container">
             <ul class="tranding_select tabs" style="background:transparent">
                 <li class="tab"><a class="waves-effect btn" (click)="switch=false"
@@ -76,7 +80,7 @@
                 <div class="col-sm-12 col-lg-3">
                     <h4>About this Store</h4>
                     <br>
-                    <span [innerHTML]="storeDetail"></span>
+                    <span [innerHTML]="longDes" class="xyz"></span>
                 </div>
             </div>
             <div class="row" *ngIf="switch">
